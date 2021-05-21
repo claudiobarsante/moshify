@@ -98,7 +98,7 @@ a {
 	white-space: nowrap; /*avoid wrappinp to a second line*/
 }
 /*skin*/
-/*using BEM convetion to separate a block and the modifier*/
+/*using BEM convetion '--' to separate a block and the modifier or variation*/
 .badge--primary {
 	background: var(--color-primary);
 	color: #fff;
@@ -129,7 +129,7 @@ a {
 	padding-left: 0;
 	color: var(--color-headings);
 }
-/*using BEM convetion to separate a block and the element list__item*/
+/*using BEM convetion '__' to separate a block and the element list__item*/
 .list--inline .list__item {
 	display: inline-block;
 	margin-right: 2rem;
@@ -149,4 +149,25 @@ a {
 	.list--tick .list__item {
 		padding-left: 0;
 	}
+}
+
+/* Icons */
+.icon {
+	width: 40px;
+	height: 40px;
+}
+
+.icon--primary {
+	fill: var(--color-primary);
+}
+
+.icon-container {
+	background: #f3f9fa;
+	width: 64px;
+	height: 64px;
+	border-radius: 100%;
+	display: inline-flex; /*<span> is an inline element, so width and height have no effect, 
+	so you have to use inline-block. As you are going to use flexbox, so inline-flex*/
+	justify-content: center;
+	align-items: center;
 }
