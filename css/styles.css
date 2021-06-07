@@ -167,20 +167,32 @@ a {
 	height: 40px;
 }
 
+.icon--small {
+	width: 30px;
+	height: 30px;
+}
 .icon--primary {
 	fill: var(--color-primary);
 }
 
+.icon--white {
+	fill: #fff;
+}
+
 .icon-container {
 	display: inline-flex; /*<span> is an inline element, so width and height have no effect, 
-	height: 64px;
-	justify-content: center;
 	so you have to use inline-block. As you are going to use flexbox, so inline-flex*/
+	justify-content: center;
 	align-items: center;
 
 	background: #f3f9fa;
 	border-radius: 100%;
+	height: 64px;
 	width: 64px;
+}
+
+.icon-container--accent {
+	background: var(--color-accent);
 }
 
 /* Buttons */
@@ -285,7 +297,7 @@ a {
 .card {
 	border-radius: 7px;
 	box-shadow: 0 0 20px 10px #f3f3f3;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .card__header,
@@ -453,5 +465,36 @@ then tablets*/
 @media screen and (min-width: 1024px) {
 	.grid--1x3 {
 		grid-template-columns: repeat(3, 1fr);
+	}
+}
+/* Testimonials */
+
+.testimonial {
+	padding: 3rem;
+}
+
+.testimonial__image {
+	position: relative;
+}
+/* direct child selector '>" targeting the image directly inside this container */
+.testimonial__image > img {
+	width: 100%;
+}
+
+.testimonial__image > .icon-container {
+	position: absolute;
+	top: 3rem;
+	right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+	.testimonial .quote,
+	.testimonial .quote__author {
+		font-size: 2.4rem;
+	}
+
+	.testimonial .quote {
+		margin-left: 6rem;
+		margin-right: 0;
 	}
 }
