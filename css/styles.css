@@ -545,3 +545,38 @@ then tablets*/
 		margin: 0 2rem;
 	}
 }
+
+/* Collapsibles */
+
+.collapsible__header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.collapsible__heading {
+	margin-top: 0;
+	font-size: 3rem;
+}
+
+.collapsible__chevron {
+	transform: rotate(-90deg);
+	transition: transform 0.3s;
+}
+
+.collapsible__content {
+	/* using max-height and overflow properties they'll hide the content*/
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+
+	transition: all 0.3s; /* to aply transition to all properties use 'all'*/
+}
+
+.collapsible--expanded .collapsible__chevron {
+	transform: rotate(0); /* rotate to it's original position*/
+}
+
+.collapsible--expanded .collapsible__content {
+	max-height: 100vh; /*using max-height it's just to allow to strech the height of it's content. If instead you use just 'height' it'll strech to size of the entire viewport*/
+	opacity: 1; /*return the opacity to one it's to give a fadding effect*/
+}
