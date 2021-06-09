@@ -580,3 +580,44 @@ then tablets*/
 	max-height: 100vh; /*using max-height it's just to allow to strech the height of it's content. If instead you use just 'height' it'll strech to size of the entire viewport*/
 	opacity: 1; /*return the opacity to one it's to give a fadding effect*/
 }
+
+.block {
+	--padding-vertical: 6rem;
+	padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+	text-align: center;
+}
+
+.block--dark {
+	background: #000;
+	color: #7b858b;
+}
+
+.block__heading {
+	margin-top: 0;
+}
+
+.block--dark .block__heading {
+	color: #fff;
+}
+
+/* clip path generator -> Clippy bennettfeely.com - to generate a cropped image */
+.block--skewed-right {
+	/*padding-bottom: 10rem; to not hardcode de value of the padding-bottom
+	and replace everytime the vertical padding of the .block class changes,
+	declare a variable and do a simple calculation */
+	padding-bottom: calc(var(--padding-vertical) + 4rem);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+	padding-bottom: calc(var(--padding-vertical) + 4rem);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto; /*if it has free space it will be distributed equally on both sides*/
+}
