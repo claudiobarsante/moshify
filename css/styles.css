@@ -310,7 +310,7 @@ a {
 .card {
 	border-radius: 7px;
 	box-shadow: 0 0 20px 10px #f3f3f3;
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 
 .card__header,
@@ -328,6 +328,9 @@ a {
 	color: white;
 }
 
+.card--primary .badge--primary {
+	background: #126de4;
+}
 .card--secondary .badge--secondary {
 	background: #02cdf1;
 }
@@ -363,7 +366,10 @@ a {
 	letter-spacing: 1px;
 }
 
-.plan--popular .card {
+.plan--popular {
+	transform: scale(1.1); /*making popular plan a little bit larger(here 10%) than others*/
+}
+.plan--popular .card__header {
 	position: relative;
 }
 
@@ -376,6 +382,16 @@ a {
 	right: 5%;
 }
 
+.plan:hover {
+	transform: scale(1.05);
+}
+
+.plan {
+	transition: transform 0.2s ease-out;
+}
+.plan--popular:hover {
+	transform: scale(1.15);
+}
 @media screen and (min-width: 1024px) {
 	.plan__name {
 		font-size: 1.4rem;
@@ -750,4 +766,15 @@ minmax to provide a range, so it will distribute all the available space equally
 	.block-domain__prices {
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 	}
+}
+
+/* Plans Block*/
+
+.block-plans .grid {
+	gap: 8rem 4rem;
+}
+
+.block-plans .card {
+	max-width: 500px;
+	margin: 0 auto; /* you can center the card horizontally setting to auto so all available space will be equally distributed horizontally*/
 }
