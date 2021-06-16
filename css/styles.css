@@ -778,3 +778,27 @@ minmax to provide a range, so it will distribute all the available space equally
 	max-width: 500px;
 	margin: 0 auto; /* you can center the card horizontally setting to auto so all available space will be equally distributed horizontally*/
 }
+
+/* Features */
+.feature {
+	gap: 4rem 2rem;
+	margin: 12 rem 0;
+}
+
+.feature:first-of-type {
+	margin-top: 6rem;
+}
+.feature__heading {
+	margin: 1rem 0;
+}
+
+.feature__image {
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	/*nth-of-type(even) selects elements that are even, ex:2,4, 6*/
+	.feature:nth-of-type(even) .feature__content {
+		order: 2; /* invert the order*/
+	}
+}
