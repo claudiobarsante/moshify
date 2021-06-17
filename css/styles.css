@@ -613,6 +613,8 @@ then tablets*/
 	opacity: 1; /*return the opacity to one it's to give a fadding effect*/
 }
 
+/* Blocks */
+
 .block {
 	--padding-vertical: 6rem;
 	padding: var(--padding-vertical) 2rem;
@@ -620,6 +622,7 @@ then tablets*/
 
 .block__header {
 	text-align: center;
+	margin-bottom: 4rem;
 }
 
 .block--dark {
