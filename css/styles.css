@@ -16,6 +16,11 @@
 }
 
 /* Typography */
+::selection {
+	/* when selection any text on page*/
+	background: var(--color-primary);
+	color: #fff;
+}
 html {
 	font-size: 62.5%;
 }
@@ -45,6 +50,7 @@ h2 {
 
 h3 {
 	font-size: 3rem;
+	font-weight: 500;
 }
 
 p {
@@ -138,7 +144,6 @@ a {
 .list {
 	list-style: none;
 	padding-left: 0;
-	color: var(--color-headings);
 }
 /*using BEM convetion '__' to separate a block and the element list__item*/
 .list--inline .list__item {
@@ -149,6 +154,7 @@ a {
 .list--tick {
 	list-style-image: url(../images/tick.svg);
 	padding-left: 3rem;
+	color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -413,6 +419,7 @@ a {
 /* Media */
 .media {
 	display: flex;
+	margin-bottom: 4rem;
 }
 
 .media__title {
@@ -624,7 +631,9 @@ then tablets*/
 	margin-top: 0;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
 	color: #fff;
 }
 
@@ -634,12 +643,12 @@ then tablets*/
 	and replace everytime the vertical padding of the .block class changes,
 	declare a variable and do a simple calculation */
 	padding-bottom: calc(var(--padding-vertical) + 4rem);
-	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
 	padding-bottom: calc(var(--padding-vertical) + 4rem);
-	clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container {
@@ -712,10 +721,6 @@ then tablets*/
 }
 
 /* Hero */
-
-.hero {
-	clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
 
 .hero__tagline {
 	font-size: 2rem;
@@ -800,5 +805,27 @@ minmax to provide a range, so it will distribute all the available space equally
 	/*nth-of-type(even) selects elements that are even, ex:2,4, 6*/
 	.feature:nth-of-type(even) .feature__content {
 		order: 2; /* invert the order*/
+	}
+}
+
+/* Showcase Block*/
+.block-showcase__image > img {
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	/*if you have 1fr 1fr, the available space will be divided in 2 slices and each column
+	will take one slice.If you change to 50% 50%, that means 50% of the width of the container
+	so the width of the column will not be determined by it's content*/
+	.block-showcase .grid {
+		grid-template-columns: 50% 50%;
+	}
+	.block-showcase__image {
+		justify-self: end;
+	}
+	.block-showcase__image > img {
+		/* '>' using the sirect child selector*/
+		width: auto; /* the image will be displayed in it's actual size*/
+		max-width: width 700px;
 	}
 }
