@@ -307,7 +307,7 @@ a {
 	margin: 4px;
 }
 
-@media screen and(min-width:1024px) {
+@media screen and (min-width: 1024px) {
 	.input {
 		font-size: 1.5rem;
 	}
@@ -792,7 +792,7 @@ minmax to provide a range, so it will distribute all the available space equally
 /* Features */
 .feature {
 	gap: 4rem 2rem;
-	margin: 12 rem 0;
+	margin: 12rem 0;
 }
 
 .feature:first-of-type {
@@ -831,7 +831,7 @@ minmax to provide a range, so it will distribute all the available space equally
 	.block-showcase__image > img {
 		/* '>' using the sirect child selector*/
 		width: auto; /* the image will be displayed in it's actual size*/
-		max-width: width 700px;
+		max-width: 700px;
 	}
 }
 
