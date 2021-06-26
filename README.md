@@ -3,7 +3,7 @@
 ## A fake cloud  hosting  page with plain HTML, CSS and javascript. Mobile-first development and BEM convention in CSS ⚡
 
 
-- 🤓 I'm sharing this website that's a result of 3 series course - The Ultimate HTML5 & CSS3 Series -  from Mosh Hamadaniome. It's always good to review the basics and brush 
+- 🤓 I'm sharing this website that's a result of 3 series course - The Ultimate HTML5 & CSS3 Series -  from Mosh Hamadani. It's always good to review the basics and brush 
 our technique.
 
 - For animation we use AOS <a href='https://michalsnik.github.io/aos/'>https://michalsnik.github.io/aos/</a>
