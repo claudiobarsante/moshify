@@ -831,7 +831,7 @@ minmax to provide a range, so it will distribute all the available space equally
 		justify-self: end;
 	}
 	.block-showcase__image > img {
-		/* '>' using the sirect child selector*/
+		/* '>' using the direct child selector*/
 		width: auto; /* the image will be displayed in it's actual size*/
 		max-width: 700px;
 	}
